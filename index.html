@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>JGC - CS:GO Style Raffle System</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="light-one"></div>
+    <div class="light-two"></div>
+
+    <!-- partial:index.partial.html -->
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+          <radialGradient
+            id="grad"
+            cx="3"
+            cy="3"
+            r="6"
+            gradientUnits="userSpaceOnUse"
+          >
+            <stop offset="0" style="stop-color: #e3abce" />
+            <stop offset="0.4" style="stop-color: #f9b0c3" />
+            <stop offset="0.6" style="stop-color: #edddc4" />
+            <stop offset="0.9" style="stop-color: #fee8c7" />
+            <stop offset="1" style="stop-color: pink" />
+          </radialGradient>
+          <radialGradient
+            id="dotGrad"
+            cx="0"
+            cy="0"
+            r="50"
+            gradientUnits="userSpaceOnUse"
+          >
+            <stop offset="0" style="stop-color: #ffffff; stop-opacity: 1" />
+            <stop offset="0.1" style="stop-color: #0867c7; stop-opacity: 0.6" />
+            <stop offset="1" style="stop-color: #081029; stop-opacity: 0" />
+          </radialGradient>
+          <div class="page-header">
+            <h1>JGC - CS:GO Style Raffle System <small>by EGG</small></h1>
+          </div>
+        </div>
+      </div>
+
+      <div class="row topbox">
+        <div class="col-md-6 col-md-offset-3 rollbox">
+          <div class="line"></div>
+          <table>
+            <tr id="loadout"></tr>
+          </table>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+          <button id="roll" class="btn btn-success form-control">Roll</button>
+          <div
+            id="msgbox"
+            class="alert alert-warning"
+            style="margin-top: 20px; display: none"
+          >
+            You need to add at least 2 lines!
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-12" style="text-align: center">
+          <div id="log"></div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+          <p>Insert the list of Users:</p>
+          <textarea class="form-control inputbox" rows="10"></textarea>
+        </div>
+      </div>
+    </div>
+    <!-- partial -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="./script.js"></script>
+  </body>
+</html>
