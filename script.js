@@ -1,4 +1,17 @@
 $(document).ready(function(){
+	var html = $('h1').html();
+	var ret  = "";
+	var rando = 0;
+  
+	$.each(html.split(''), function(k, v) {
+	   rando = Math.floor(Math.random() * 7) + 1
+	   ret += '<span class="lights-' + rando + '">' + v + '</span>';
+	});
+  
+	$('h1').html(ret);
+  })
+  
+$(document).ready(function(){
 	var users = [],
 	shuffled = [],
 	loadout = $("#loadout"),
@@ -52,7 +65,8 @@ $(document).ready(function(){
 				var center = window.innerWidth / 2;
 				if($(this).offset().left < center && $(this).offset().left + 185 > center){
 					var text = $(this).children().text();
-					$("#log").append("THE WINNER IS<br/> <span class=\"badge\">"+text+"</span>");
+					
+					$("#log").append("CONGRATULATIONS!!<br/> <span class=\"badge\">"+text+"</span>");
 					
 				}
 				
@@ -72,4 +86,6 @@ $(document).ready(function(){
 	{
 		return Math.floor(Math.random()*(max-min+1)+min);
 	}
+	
 });
+
